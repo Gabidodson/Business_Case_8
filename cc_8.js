@@ -26,6 +26,15 @@ class Department {
     getDepartmentSalary() {
         return this.employees.reduce((total, employee) => total + employee.salary, 0);
     }
+    calculateTotalSalaryWithBonus(){
+        return this.employees.reduce((total, employee)=>{
+            if (employee instanceof Manager){
+                return total + employee.salary + employee.bonus;
+            }else{
+            return total + employee.salary;
+            }
+        },0);
+    }
     }
 //adding a department and employees 
 const MarketingDepartment = new Department ("Marketing");
@@ -45,3 +54,5 @@ this.bonus = bonus;
 
     }
 }
+
+//Handle Bonuses for Managers
