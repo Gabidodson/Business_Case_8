@@ -32,3 +32,16 @@ const MarketingDepartment = new Department ("Marketing");
 const Daffy = new Employee("Daffy Duck", 72000, "Marketing");
 const Bugs = new Employee("Bugs Bunny", 90000, "Marketing");
 const Porky = new Employee("Porky Pig", 65000, "Marketing");
+
+//Creating a Manager class that inherits from Employee
+class Manager extends Employee {
+    constructor(name, salary, position, department, bonus){
+super(name, salary, position, department);
+this.bonus = bonus;
+    }
+    getDetails(){
+        const employeeDetails = super.getDetails();
+        return `${employeeDetails}, Bonus:$${this.bonus}`;
+
+    }
+}
