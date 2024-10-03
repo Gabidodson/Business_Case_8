@@ -56,3 +56,33 @@ this.bonus = bonus;
 }
 
 //Handle Bonuses for Managers
+//added to task 2
+
+//Create and Manage Departments & Employees
+let engineeringDepartment = new Department ("Engineering");
+let financeDepartment = new Department ("Finance");
+
+let ScoobyDoo = new Manager("Scooby Doo", 105000, "Engineering");
+let PatrickStar = new employee("Patrick Star", 45000, "Engineering");
+let MarvinMartian = new employee("Marvin Martin", 82000, "Engineering");
+
+let SpeedyGonzales = new Manager("Speedy Gonzales", 92000, "Finance");
+let TweetyBird = new employee("Tweety Bird", 74000, "Finance");
+let PepeLePew = new employee("PepeLePew", 54000, "Finance");
+
+engineeringDepartment.addEmployee(ScoobyDoo);
+engineeringDepartment.addEmployee(PatrickStar);
+engineeringDepartment.addEmployee(MarvinMartian);
+
+financeDepartment.addEmployee(SpeedyGonzales);
+financeDepartment.addEmployee(TweetyBird);
+financeDepartment.addEmployee(PepeLePew);
+
+console.log("Engineering Department:");
+console.log(`Total salary: $${engineeringDepartment.getDepartmentSalary()}`);
+console.log(`Total salary with bonuses: $${engineeringDepartment.calculateTotalSalaryWithBonus}`);
+
+console.log("Finance Department:");
+console.log(`Total salary: $${financeDepartment.getDepartmentSalary()}`);
+console.log(`Total salary with bonuses: $${financeDepartment.calculateTotalSalaryWithBonus()}`);
+
